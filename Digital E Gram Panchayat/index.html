@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital E Gram Panchayat</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+  <h1>Digital E Gram Panchayat</h1>
+  </header>
+
+
+<div id="login">
+  <div id="login-section">
+    <h2 class="login-title">Login</h2>
+    <form id="login-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+  <div id="admin-dashboard" class="hidden">
+    <h2>Admin Dashboard</h2>
+    <button id="add-service">Create Services</button>
+    <div id="serviceFormContainer" class="hidden">
+      <h2>Add Services</h2>
+      <form id="serviceForm">
+          <input type="text" id="serviceName" placeholder="Service Name" required>
+          <textarea id="serviceDescription" placeholder="Service Description" required></textarea>
+          <input type="text" id="serviceCategory" placeholder="Category" required>
+          <input type="text" id="serviceEligibility" placeholder="Eligibility" required>
+          <input type="text" id="serviceProcessingTime" placeholder="Processing Time" required>
+          <input type="number" id="serviceFee" placeholder="Fee" required>
+          <input type="text" id="serviceDocuments" placeholder="Documents Required (comma separated)" required>
+          <button type="button" id="submitService">Submit</button>
+      </form>
+    </div>
+
+    <button id="update-service">Update Services</button>
+    <div id="updateServiceContainer" class="hidden">
+      <h2>Update Services</h2>
+  <label for="updateServiceIdInput">Service ID:</label>
+  <input type="text" id="updateServiceIdInput" placeholder="Enter Service ID" required />
+  <br><br>
+
+  <label for="updateServiceName">Service Name:</label>
+  <input type="text" id="updateServiceName" placeholder="New Name (optional)" />
+  <br><br>
+
+  <label for="updateServiceDescription">Description:</label>
+  <input type="text" id="updateServiceDescription" placeholder="New Description (optional)" />
+  <br><br>
+
+  <label for="updateServiceCategory">Category:</label>
+  <input type="text" id="updateServiceCategory" placeholder="New Category (optional)" />
+  <br><br>
+
+  <label for="updateServiceEligibility">Eligibility:</label>
+  <input type="text" id="updateServiceEligibility" placeholder="New Eligibility (optional)" />
+  <br><br>
+
+  <label for="updateServiceProcessingTime">Processing Time:</label>
+  <input type="text" id="updateServiceProcessingTime" placeholder="New Processing Time (optional)" />
+  <br><br>
+
+  <label for="updateServiceFee">Fee:</label>
+  <input type="number" id="updateServiceFee" placeholder="New Fee (optional)" />
+  <br><br>
+
+  <label for="updateServiceDocuments">Documents Required (comma-separated):</label>
+  <input type="text" id="updateServiceDocuments" placeholder="New Documents (optional)" />
+  <br><br>
+
+  <button id="updateServiceBtn">Update Service</button>
+
+</div>
+    <button id="delete-service">Delete Services</button>
+    <div id="deleteServiceContainer" class="hidden">
+      <h2>Delete Services</h2>
+      <input type="text" id="serviceIdInput" placeholder="Enter Service ID" />
+      <button id="deleteServiceBtn">Delete Service</button>
+    </div>
+    <button id="logout-admin">Logout</button>
+</div>
+
+<div id="user-dashboard" class="hidden">
+    <h2>User Dashboard</h2>
+    <button id="register-user">Register</button>
+    <button id="apply-service">Apply Services</button>
+    <div id="applyServiceContainer" class="hidden">
+      <h2>Apply for Services</h2>
+      <form id="service-application-form">
+        <label for="serviceId">Service ID: </label>
+        <input type="text" id="serviceId" placeholder="Enter Service ID" required />
+    
+        <label for="userName">Your Name: </label>
+        <input type="text" id="userName" placeholder="Enter Your Name" required />
+    
+        <label for="userEmail">Your Email: </label>
+        <input type="email" id="userEmail" placeholder="Enter Your Email" required />
+    
+        <button type="submit">Apply</button>
+      </form>
+    </div>
+    <div id="application-status-container" class="hidden">
+      <h3>My Application Status</h3>
+      <div id="application-status-message">
+        <!-- Message will be dynamically displayed here -->
+      </div>
+    </div>
+    <button id="logout-user">Logout</button>
+</div>
+
+<div id="staff-dashboard" class="hidden">
+  <h2>Staff Dashboard</h2>
+  <button id="view-services">View Services</button>
+  <button id="update-status">Update Application Status</button>
+  <button id="logout-staff">Logout</button>
+  
+  <div id="servicesList"></div> <!-- List of services will be displayed here -->
+</div>
+
+
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "",
+      authDomain: "",
+      projectId: "",
+      storageBucket: "",
+      messagingSenderId: "",
+      appId: ""
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+
+<script type="module" src="script.js"></script>
+  
+</body>
+</html>

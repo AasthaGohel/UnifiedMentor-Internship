@@ -1,0 +1,255 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  color: #003049;
+}
+
+/* Login Section Container */
+
+h1{
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#login {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+  padding: 20px;
+}
+
+/* Login Form Section */
+#login-section {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 350px;
+  height: 350px;
+ 
+  
+}
+
+/* Login Form Title */
+.login-title{
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: black;
+  text-align: center;
+}
+
+/* Form Labels */
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+}
+
+/* Form Inputs */
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Submit Button */
+form button {
+  display: block;
+  margin: 10px auto;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Admin Dashboard Container */
+#admin-dashboard {
+  width: 60%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: auto;
+}
+
+/* Dashboard Headings */
+#admin-dashboard h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Forms & Input Fields */
+form {
+  margin-top: 20px;
+  text-align: left;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* Service Form Containers */
+#serviceFormContainer, 
+#updateServiceContainer, 
+#deleteServiceContainer {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin: auto;
+}
+
+.hidden{
+  display: none;
+}
+
+
+
+/* User Dashboard Container */
+#user-dashboard {
+  width: 60%;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: auto;
+}
+
+/* Dashboard Headings */
+#user-dashboard h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Apply Services & Application Status Sections */
+#applyServiceContainer, 
+#application-status-container {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin: auto;
+}
+
+/* Application Status Message */
+#application-status-message {
+  background: #e3f2fd;
+  padding: 10px;
+  border-radius: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Staff Dashboard Container */
+#staff-dashboard {
+  width: 50%;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: auto;
+}
+
+/* Dashboard Headings */
+#staff-dashboard h2 {
+  color: #2c3e50;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Logout Button */
+#logout-staff {
+  background-color: #dc3545;
+}
+
+#logout-staff:hover {
+  background-color: #b02a37;
+}
+
+/* Services List Styling */
+#servicesList {
+  margin-top: 20px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin: auto;
+}
+
+#servicesList h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Logout Button */
+#logout-user {
+  background-color: #dc3545;
+}
+
+#logout-user:hover {
+  background-color: #b02a37;
+}
+
+/* Logout Button */
+#logout-admin {
+  background-color: #dc3545;
+}
+
+#logout-admin:hover {
+  background-color: #b02a37;
+}
+
