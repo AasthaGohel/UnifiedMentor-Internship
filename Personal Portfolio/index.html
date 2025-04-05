@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aastha - Developer Profile</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -13,18 +13,23 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <div class="left">Portfolio</div>
-      <div class="right">
-         <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-          <a href="/assets/Resume updated.pdf">Download Resume</a>
-      </div>
-    </nav>
-  </header>
+    <header>
+        <nav>
+          <div class="left">Portfolio</div>
+      
+          <!-- Hamburger icon -->
+          <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      
+          <div class="right" id="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="/assets/Resume Final.pdf">Download Resume</a>
+          </div>
+        </nav>
+      </header>
+      
 
   <main>
     <section id="home">
@@ -43,9 +48,9 @@
       <div class="aboutRight">
         <img src="/images/profile.png" alt="profile">
       </div>
-      <div class="aboutLeft">
+    <div class="aboutLeft">
         <h1>Get to Know Me</h1>
-        <p>
+        <p class="know-me">
           Hi, I'm Aastha Gohel—a tech enthusiast passionate about crafting innovative solutions to real-world problems.
           With a strong foundation in programming and a commitment to making a meaningful impact,
           I thrive at the intersection of creativity and technology. I am also a dedicated software engineer with experience
@@ -54,53 +59,85 @@
           approach to technology.
         </p>
         <div>
-          <button onclick="displayText()" class="tabButton">Education</button>
-          <button class="tabButton" id="skills">Skills</button>
-          <button class="tabButton" id="hobbies">Hobbies</button>
-          <button class="tabButton" id="interest">Interests</button>
-        </div>
-        <div id="education">
+            <button onclick="showTab('education')" class="tabButton">Education</button>
+            <button onclick="showTab('skills')" class="tabButton">Skills</button>
+            <button onclick="showTab('hobbies')" class="tabButton">Hobbies</button>
+            <button onclick="showTab('interests')" class="tabButton">Interests</button>
+          </div>
+          
+          <div id="education" class="tabContent">
             <div class="degree">
-              <h3>Bachelors in Computer Science and Engineering</h2>
-              <ul>
-                <li>Chandigarh University, Chandigarh</li>
-                <li>CGPA: 8.72</li>
-                <li>2022-2026</li>
-              </ul>
-              <br>
-            </div>
-            <div class="intermediate">
-              <h3>Intermediate (CBSE)</h2>
-              <ul>
-                <li>The Millennium School, HMEL Township, Bathinda, Punjab</li>
-                <li>Percentage: 93.4</li>
-                <li>2021-2022</li>
-              </ul>
-              <br>
-            </div>
-            <div class="matriculation">
-              <h3>Matriculation (CBSE)</h2>
-              <ul>
-                <li>The Millennium School, HMEL Township, Bathinda, Punjab</li>
-                <li>Percentage: 97.6</li>
-                <li>2020-2021</li>
-              </ul>
-            </div>
-        </div>
-        <div id="skills">
-            <h3>Technical Skills</h3>
+                <h3>Bachelors in Computer Science and Engineering</h2>
+                <ul>
+                  <li>Chandigarh University, Chandigarh</li>
+                  <li>CGPA: 8.72</li>
+                  <li>2022-2026</li>
+                </ul>
+                <br>
+              </div>
+              <div class="intermediate">
+                <h3>Intermediate (CBSE)</h2>
+                <ul>
+                  <li>The Millennium School, HMEL Township, Bathinda, Punjab</li>
+                  <li>Percentage: 93.4</li>
+                  <li>2021-2022</li>
+                </ul>
+                <br>
+              </div>
+              <div class="matriculation">
+                <h3>Matriculation (CBSE)</h2>
+                <ul>
+                  <li>The Millennium School, HMEL Township, Bathinda, Punjab</li>
+                  <li>Percentage: 97.6</li>
+                  <li>2020-2021</li>
+                </ul>
+              </div>
+          </div>
+          <div id="skills" class="tabContent" style="display: none;">
+            <h3>Skills</h3>
+          
+            <h4>Technical Skills</h4>
             <ul>
-              <li>Java</li>
-              <li>Python</li>
-              <li>HTML</li>
-              
+              <li><strong>Programming Languages:</strong> Java, C/C++, Python</li>
+              <li><strong>Web Development:</strong> HTML, CSS, JavaScript (Basics), React (Basics)</li>
+              <li><strong>Databases:</strong> MySQL, SQL Workbench</li>
+              <li><strong>Tools & Platforms:</strong> Git, GitHub, Eclipse, Visual Studio Code, Jenkins</li>
+              <li><strong>Other Tech:</strong> Arduino, Machine Learning (Basics), REST APIs, Spring (Basics)</li>
             </ul>
           
-
-        </div>
-
-        
-        
+            <br>
+            <h4>Soft Skills</h4>
+            <ul>
+              <li><strong>Communication:</strong> Clear and confident in both verbal and written communication</li>
+              <li><strong>Teamwork:</strong> Collaborative and open to ideas in group settings</li>
+              <li><strong>Leadership:</strong> Experience in leading projects and events with effective coordination</li>
+              <li><strong>Problem Solving:</strong> Logical thinker with a practical approach to challenges</li>
+              <li><strong>Adaptability:</strong> Quick to learn and thrive in dynamic environments</li>
+            </ul>
+          </div>
+          
+          
+          <div id="hobbies" class="tabContent" style="display: none;">
+            <h3>Hobbies</h3>
+            <ul>
+              <li><strong>Reading:</strong> I love exploring fiction, especially mystery and self-development books that spark imagination and growth.</li>
+              <li><strong>Sketching & Doodling:</strong> Drawing and sketching help me relax and express creativity in a fun way.</li>
+              <li><strong>Music:</strong> Whether it's listening to indie, classical, or lo-fi, music is my daily companion.</li>
+              <li><strong>Dancing:</strong> I enjoy dancing to upbeat music—it's both energizing and therapeutic.</li>
+            </ul>
+          </div>
+          
+          
+          <div id="interests" class="tabContent" style="display: none;">
+            <h3>Interests</h3>
+            <ul>
+              <li><strong>Technology & Innovation:</strong> I'm fascinated by how technology solves real-world problems and love exploring new tools, trends, and innovations.</li>
+              <li><strong>Astronomy:</strong> I enjoy learning about the universe, stargazing, and following space exploration missions.</li>
+              <li><strong>Public Speaking & Events:</strong> I actively participate in college events, especially debates and MUNs, where I can express opinions and learn from others.</li>
+              <li><strong>Learning New Languages:</strong> I find it exciting to explore new cultures through language. Currently, I’m learning German and enjoying every bit of the process.</li>
+              <li><strong>Social Impact:</strong> I'm interested in projects that create a positive difference, especially in education, sustainability, and community well-being.</li>
+            </ul>
+        </div> 
       </div>
     </section>
     
